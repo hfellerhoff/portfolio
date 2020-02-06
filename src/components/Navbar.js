@@ -4,9 +4,7 @@ import logo from '../img/logo.svg';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-  const [navbarRef, setNavbarRef] = useState(
-    typeof window !== undefined ? document.createElement('div') : null
-  );
+  const [navbarRef, setNavbarRef] = useState(null);
 
   const checkForScroll = () => {
     if (typeof window !== undefined) {
