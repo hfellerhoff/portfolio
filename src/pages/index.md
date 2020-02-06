@@ -1,9 +1,10 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+pretitle: Hey - I'm
+title: Henry Fellerhoff
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: asdf
+subheading: A passionate, self-driven student and developer whose life revolves around technology and music.
 mainpitch:
   title: Why Kaldi
   description: >

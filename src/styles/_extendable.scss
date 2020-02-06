@@ -1,0 +1,27 @@
+%side-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 1000px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  transition: padding-left, padding-right 0.3s ease-in-out;
+}
+
+%transition-all {
+  transition: all 0.2s ease-in-out;
+}
