@@ -38,6 +38,7 @@
 .hero-logo {
   margin-top: 20px;
 
+  width: 400px;
   @media screen and (min-width: 800px) {
     width: 500px;
   }
@@ -59,6 +60,7 @@
   font-weight: 300;
   line-height: 1.5em;
 
+  max-width: 50vw;
   @media screen and (min-width: 950px) {
     max-width: 50vw;
   }
@@ -70,4 +72,36 @@
   }
 
   margin-top: 20px;
+}
+
+.hero-emphasis-green {
+  font-size: 1.35em;
+  font-weight: 400;
+
+  color: #65c19c;
+  text-shadow: -2px 2px 0px #328060;
+
+  @extend %transition-all;
+}
+
+.hero-emphasis-blue {
+  font-size: 1.35em;
+  font-weight: 400;
+
+  color: #59c7d1;
+  text-shadow: -2px 2px 0px #3c8b8a;
+
+  @extend %transition-all;
+}
+
+.hero-emphasis-green:hover {
+  border-bottom: 3px solid #65c19c;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.hero-emphasis-blue:hover {
+  border-bottom: 3px solid #59c7d1;
+  cursor: pointer;
+  padding-bottom: 3px;
 }

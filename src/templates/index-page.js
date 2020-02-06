@@ -22,9 +22,13 @@ export const IndexPageTemplate = ({
   <div>
     <div className={styles.hero}>
       <h3 className={styles.heroPretitle}>{pretitle}</h3>
-      {/* <h1 className={styles.heroTitle}>{title}</h1> */}
       <img src={logo} alt='Henry Fellerhoff' className={styles.heroLogo} />
-      <h3 className={styles.heroSubtitle}>{subheading}</h3>
+      {/* <h3 className={styles.heroSubtitle}>{subheading}</h3> */}
+      <h3 className={styles.heroSubtitle}>
+        A passionate, self-driven student and developer whose life revolves
+        around <span className={styles.heroEmphasisBlue}>technology</span> and{' '}
+        <span className={styles.heroEmphasisGreen}>music</span>.
+      </h3>
     </div>
     <section className='section section--gradient'>
       <div className='container'>
