@@ -5,7 +5,7 @@ import styles from './Navbar.module.scss';
 
 const Navbar = () => {
   const [navbarRef, setNavbarRef] = useState(
-    typeof document === undefined ? null : document.createElement('div')
+    typeof window !== undefined ? document.createElement('div') : null
   );
 
   const checkForScroll = () => {
