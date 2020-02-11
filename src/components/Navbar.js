@@ -34,12 +34,14 @@ const Navbar = () => {
             <img src={logo} alt='HF' className={styles.logoImage} />
           </Link>
         </div>
-        <div id='navMenu' className={styles.menu}>
-          <div className='navbar-start has-text-centered'>
-            <Link className={styles.link} to='/about'>
-              About
-            </Link>
-          </div>
+        <div className={styles.menu}>
+          <Link className={styles.link} to='/about'>
+            About
+          </Link>
+          <div className={styles.linkSpacer} />
+          <Link className={styles.link} to='/about'>
+            Projects
+          </Link>
         </div>
       </div>
     </nav>

@@ -84,34 +84,32 @@
   margin-top: 20px;
 }
 
-.hero-emphasis-green {
+.hero-emphasis {
   font-size: 1.35em;
-  font-weight: 400;
-
-  color: #65c19c;
-  text-shadow: -2px 2px 0px #328060;
+  font-weight: 500;
 
   @extend %transition-all;
 }
 
 .hero-emphasis-blue {
-  font-size: 1.35em;
-  font-weight: 400;
-
   color: #59c7d1;
   text-shadow: -2px 2px 0px #3c8b8a;
+}
 
-  @extend %transition-all;
+.hero-emphasis-green {
+  color: #65c19c;
+  text-shadow: -2px 2px 0px #328060;
+}
+
+.hero-emphasis:hover {
+  cursor: pointer;
+  padding-bottom: 3px;
 }
 
 .hero-emphasis-green:hover {
   border-bottom: 3px solid #65c19c;
-  cursor: pointer;
-  padding-bottom: 3px;
 }
 
 .hero-emphasis-blue:hover {
   border-bottom: 3px solid #59c7d1;
-  cursor: pointer;
-  padding-bottom: 3px;
 }

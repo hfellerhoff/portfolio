@@ -23,11 +23,16 @@ export const IndexPageTemplate = ({
     <div className={styles.hero}>
       <h3 className={styles.heroPretitle}>{pretitle}</h3>
       <img src={logo} alt='Henry Fellerhoff' className={styles.heroLogo} />
-      {/* <h3 className={styles.heroSubtitle}>{subheading}</h3> */}
       <h3 className={styles.heroSubtitle}>
-        A passionate, self-driven student and developer whose life revolves
-        around <span className={styles.heroEmphasisBlue}>technology</span> and{' '}
-        <span className={styles.heroEmphasisGreen}>music</span>.
+        A self-driven student and developer passionate about{' '}
+        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisBlue}`}>
+          technology
+        </span>{' '}
+        and{' '}
+        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisGreen}`}>
+          music
+        </span>
+        .
       </h3>
     </div>
     <section className='section section--gradient'>

@@ -4,7 +4,7 @@ pretitle: Hey - I'm
 title: Henry Fellerhoff
 image: /img/home-jumbotron.jpg
 heading: asdf
-subheading: A passionate, self-driven student and developer whose life revolves around technology and music.
+subheading: A self-driven student and developer passionate about technology and music.
 mainpitch:
   title: Why Kaldi
   description: >
