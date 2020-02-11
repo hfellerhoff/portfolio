@@ -8,33 +8,26 @@ import BlogRoll from '../components/BlogRoll';
 
 import styles from './index-page.module.scss';
 import logo from '../img/logo-long.svg';
+import Hero from '../components/Hero/Hero';
 
 export const IndexPageTemplate = ({
   image,
   pretitle,
   title,
   heading,
-  subheading,
+  subtitle,
+  subtitleEmphasis,
   mainpitch,
   description,
   intro,
 }) => (
   <div>
-    <div className={styles.hero}>
-      <h3 className={styles.heroPretitle}>{pretitle}</h3>
-      <img src={logo} alt='Henry Fellerhoff' className={styles.heroLogo} />
-      <h3 className={styles.heroSubtitle}>
-        A self-driven student and developer passionate about{' '}
-        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisBlue}`}>
-          technology
-        </span>{' '}
-        and{' '}
-        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisGreen}`}>
-          music
-        </span>
-        .
-      </h3>
-    </div>
+    <Hero
+      logo={logo}
+      pretitle={pretitle}
+      subtitle={subtitle}
+      subtitleEmphasis={subtitleEmphasis}
+    />
     <section className='section section--gradient'>
       <div className='container'>
         <div className='section'>
@@ -89,6 +82,8 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pretitle: PropTypes.string,
   title: PropTypes.string,
+  subtitle: PropTypes.string,
+  subtitleEmphasis: PropTypes.array,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
@@ -107,6 +102,8 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         pretitle={frontmatter.pretitle}
         title={frontmatter.title}
+        subtitle={frontmatter.subtitle}
+        subtitleEmphasis={frontmatter.subtitleEmphasis}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
@@ -133,6 +130,8 @@ export const pageQuery = graphql`
       frontmatter {
         pretitle
         title
+        subtitle
+        subtitleEmphasis
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
