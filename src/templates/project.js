@@ -13,7 +13,7 @@ const ProjectTemplate = () => {
 ProjectTemplate.propTypes = {};
 
 const Project = ({ data }) => {
-  const { markdownRemark: post } = data;
+  // const { markdownRemark: post } = data;
   return (
     <Layout>
       <ProjectTemplate />
