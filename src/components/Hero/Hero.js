@@ -4,42 +4,53 @@ import { Link } from 'gatsby';
 
 const Hero = ({ logo, pretitle, subtitle, subtitleEmphasis }) => {
   const addSubtitleEmphasis = text => {
-    const elementsToReturn = [];
+    const words = [];
     let word = '';
+
     // Loop through text in the subtitle
     for (let i = 0; i < text.length; i++) {
       let char = text.charAt(i);
 
       // If punctuation, process previous word
       if (char === ' ' || char === ',' || char === '.') {
-        if (word.toLowerCase() === subtitleEmphasis[0][0]) {
-          elementsToReturn.push(
-            <Link
-              className={`${styles.heroEmphasis} ${styles.heroEmphasisBlue}`}
-              to={`/${subtitleEmphasis[0][1]}`}
-            >
-              {word}
-            </Link>
-          );
-        } else if (word.toLowerCase() === subtitleEmphasis[1][0]) {
-          elementsToReturn.push(
-            <Link
-              className={`${styles.heroEmphasis} ${styles.heroEmphasisGreen}`}
-              to={`/${subtitleEmphasis[0][1]}`}
-            >
-              {word}
-            </Link>
-          );
-        } else {
-          elementsToReturn.push(<span>{word}</span>);
-        }
-        elementsToReturn.push(<span>{char}</span>);
+        words.push(word);
+        words.push(char);
         word = '';
       } else {
         word += char;
       }
     }
-    return elementsToReturn;
+
+    let isPrimaryEmphasis = true;
+    for (const i in subtitleEmphasis) {
+      const emphasis = subtitleEmphasis[i];
+      const index = words.indexOf(emphasis.word);
+
+      if (index >= 0) {
+        if (isPrimaryEmphasis) {
+          words[index] = (
+            <Link
+              className={`${styles.heroEmphasis} ${styles.heroEmphasisBlue}`}
+              to={emphasis.destination}
+            >
+              {emphasis.word}
+            </Link>
+          );
+        } else {
+          words[index] = (
+            <Link
+              className={`${styles.heroEmphasis} ${styles.heroEmphasisGreen}`}
+              to={emphasis.destination}
+            >
+              {emphasis.word}
+            </Link>
+          );
+        }
+        isPrimaryEmphasis = !isPrimaryEmphasis;
+      }
+    }
+
+    return words;
   };
 
   return (
@@ -52,15 +63,3 @@ const Hero = ({ logo, pretitle, subtitle, subtitleEmphasis }) => {
 };
 
 export default Hero;
-
-/*
-A self-driven student and developer passionate about{' '}
-        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisBlue}`}>
-          technology
-        </span>{' '}
-        and{' '}
-        <span className={`${styles.heroEmphasis} ${styles.heroEmphasisGreen}`}>
-          music
-        </span>
-        .
-*/

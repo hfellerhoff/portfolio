@@ -131,7 +131,10 @@ export const pageQuery = graphql`
         pretitle
         title
         subtitle
-        subtitleEmphasis
+        subtitleEmphasis {
+          word
+          destination
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

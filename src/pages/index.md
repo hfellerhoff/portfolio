@@ -3,7 +3,11 @@ templateKey: index-page
 pretitle: Hey - I'm
 title: Henry Fellerhoff
 subtitle: A self-driven student and developer passionate about technology and music.
-subtitleEmphasis: [['technology', 'about'], ['music', 'about']]
+subtitleEmphasis:
+  - word: technology
+    destination: about
+  - word: music
+    destination: about
 image: /img/home-jumbotron.jpg
 heading: asdf
 subheading: A self-driven student and developer passionate about technology and music.
