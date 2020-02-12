@@ -35,7 +35,10 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Pretitle, name: pretitle, widget: string}
           - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: "Subtitle Emphasis", name: subtitleEmphasis, widget: list, fields: [{label: Word, name: word, widget: string}, {label: Destination, name: destination, widget: string}]}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
