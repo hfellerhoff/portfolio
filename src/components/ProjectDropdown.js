@@ -20,13 +20,11 @@ const ProjectDropdown = ({ dropdown: { title, text } }) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.dropdownContainer}>
-        <h2
-          className={classes.dropdownTitle}
-          onClick={() => setIsDroppedDown(!isDroppedDown)}
-        >
-          {title}
-        </h2>
+      <div
+        className={classes.dropdownContainer}
+        onClick={() => setIsDroppedDown(!isDroppedDown)}
+      >
+        <h2 className={classes.dropdownTitle}>{title}</h2>
         <img
           className={classes.dropdownIcon}
           src={isDroppedDown ? minus : plus}
