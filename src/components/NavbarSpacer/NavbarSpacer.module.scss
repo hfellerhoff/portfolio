@@ -1,0 +1,19 @@
+@import '../../styles/_variables';
+
+.spacer {
+  height: $navbar-height;
+  // height: calc(#{$navbar-height} + 20px);
+
+  // @media screen and (min-width: 1000px) {
+  //   height: calc(#{$navbar-height} + 80px);
+  // }
+  // @media screen and (max-width: 1000px) {
+  //   height: calc(#{$navbar-height} + 60px);
+  // }
+  // @media screen and (max-width: 800px) {
+  //   height: calc(#{$navbar-height} + 40px);
+  // }
+  // @media screen and (max-width: 600px) {
+  //   height: calc(#{$navbar-height} + 20px);
+  // }
+}

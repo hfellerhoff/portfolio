@@ -1,13 +1,19 @@
 @import '../styles/_extendable';
+@import '../styles/_variables';
 
 .container {
   background: #202024;
 
   position: fixed;
   width: 100%;
+  height: $navbar-height;
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   @extend %transition-padding;
 }
@@ -17,6 +23,7 @@
 }
 
 .content-container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

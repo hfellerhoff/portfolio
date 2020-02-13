@@ -6,14 +6,11 @@ import Layout from '../components/Layout';
 import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 
-import styles from './index-page.module.scss';
 import logo from '../img/logo-long.svg';
 import Hero from '../components/Hero/Hero';
 
 export const IndexPageTemplate = ({
-  image,
   pretitle,
-  title,
   heading,
   subtitle,
   subtitleEmphasis,
@@ -79,9 +76,7 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pretitle: PropTypes.string,
-  title: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleEmphasis: PropTypes.array,
   heading: PropTypes.string,
@@ -99,9 +94,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         pretitle={frontmatter.pretitle}
-        title={frontmatter.title}
         subtitle={frontmatter.subtitle}
         subtitleEmphasis={frontmatter.subtitleEmphasis}
         heading={frontmatter.heading}
@@ -129,18 +122,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         pretitle
-        title
         subtitle
         subtitleEmphasis {
           word
           destination
-        }
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
         heading
         subheading

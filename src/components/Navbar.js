@@ -39,7 +39,7 @@ const Navbar = () => {
             About
           </Link>
           <div className={styles.linkSpacer} />
-          <Link className={styles.link} to='/about'>
+          <Link className={styles.link} to='/projects'>
             Projects
           </Link>
         </div>

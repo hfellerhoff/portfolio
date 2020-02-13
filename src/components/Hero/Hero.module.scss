@@ -1,8 +1,9 @@
 @import '../../styles/_extendable';
+@import '../../styles/_variables';
 
 .hero {
   background: #2c2e35;
-  height: 100vh;
+  height: calc(100vh - #{$navbar-height});
 
   display: flex;
   flex-direction: column;
