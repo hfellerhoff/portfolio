@@ -19,6 +19,7 @@ const ProjectTemplate = ({
   url,
   github,
   image,
+  boxShadow,
   technologies,
   tools,
   dropdowns,
@@ -90,15 +91,22 @@ const ProjectTemplate = ({
           </div>
         </div>
         <div className={classes.imageContainer}>
-          <div className={classes.image}>
+          <div
+            className={classes.image}
+            style={boxShadow ? {} : { boxShadow: 'none' }}
+          >
             <PreviewCompatibleImage imageInfo={image} />
           </div>
         </div>
       </div>
       <div className={classes.dropdownContainer}>
-        {dropdowns.map((dropdown, index) => {
-          return <ProjectDropdown dropdown={dropdown} key={index} />;
-        })}
+        {dropdowns ? (
+          dropdowns.map((dropdown, index) => {
+            return <ProjectDropdown dropdown={dropdown} key={index} />;
+          })
+        ) : (
+          <></>
+        )}
       </div>
       <div className={classes.projectContent}>
         <ProjectContent content={content} />
@@ -116,6 +124,7 @@ ProjectTemplate.propTypes = {
   url: PropTypes.string,
   github: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  boxShadow: PropTypes.bool,
   technologies: PropTypes.array,
   tools: PropTypes.array,
   dropdowns: PropTypes.array,
@@ -133,6 +142,7 @@ const Project = ({ data }) => {
         url,
         github,
         image,
+        boxShadow,
         technologies,
         tools,
         dropdowns,
@@ -151,6 +161,7 @@ const Project = ({ data }) => {
         url={url}
         github={github}
         image={image}
+        boxShadow={boxShadow}
         technologies={technologies}
         tools={tools}
         dropdowns={dropdowns}
@@ -191,6 +202,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        boxShadow
         technologies
         tools
         dropdowns {

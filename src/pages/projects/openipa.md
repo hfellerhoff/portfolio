@@ -6,6 +6,7 @@ description: 'A free, fast IPA transcription tool that can transcribe foreign la
 url: https://www.openipa.org
 github: https://github.com/hfellerhoff/openipa
 image: /img/openipa.jpg
+boxShadow: true
 technologies:
   - JavaScript
   - TypeScript
