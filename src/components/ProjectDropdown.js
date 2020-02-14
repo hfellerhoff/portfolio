@@ -5,18 +5,6 @@ import classes from './ProjectDropdown.module.scss';
 
 const ProjectDropdown = ({ dropdown: { title, text } }) => {
   const [isDroppedDown, setIsDroppedDown] = useState(false);
-  const [textRef, setTextRef] = useState(null);
-  const [offsetHeight, setOffsetHeight] = useState(0);
-
-  const updateOffsetHeight = () => {
-    if (textRef) {
-      setOffsetHeight(textRef.offsetHeight);
-    }
-  };
-
-  useEffect(() => {
-    updateOffsetHeight();
-  }, [isDroppedDown]);
 
   return (
     <div className={classes.container}>
@@ -35,11 +23,7 @@ const ProjectDropdown = ({ dropdown: { title, text } }) => {
         className={classes.dropdownText}
         style={{
           visibility: isDroppedDown ? 'visible' : 'hidden',
-          marginTop: isDroppedDown ? 0 : -offsetHeight,
-        }}
-        ref={p => {
-          setTextRef(p);
-          updateOffsetHeight();
+          display: isDroppedDown ? 'block' : 'none',
         }}
       >
         {text}

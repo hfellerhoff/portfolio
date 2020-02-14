@@ -57,12 +57,17 @@
     width: 400px;
   }
 
+  max-width: 80vw;
+
   @extend %transition-all;
 }
 
 .hero-subtitle {
   color: whitesmoke;
   font-size: 1.35em;
+  @media screen and (max-width: 600px) {
+    font-size: 1.25em;
+  }
   font-weight: 300;
   line-height: 1.7em;
 

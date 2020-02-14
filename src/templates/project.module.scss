@@ -19,12 +19,16 @@
 
 .project-details-container {
   flex: 1.5;
+  @media screen and (max-width: 600px) {
+    flex: 0;
+  }
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+
   @media screen and (min-width: 600px) {
     margin-right: 40px;
     align-items: flex-start;
@@ -42,6 +46,9 @@
   font-size: 4em;
   font-weight: 600;
   letter-spacing: 0.025em;
+  @media screen and (max-width: 400px) {
+    font-size: 15vw;
+  }
 }
 
 .project-type {
@@ -50,6 +57,9 @@
 
   font-weight: 700;
   font-size: 1.25em;
+  @media screen and (max-width: 400px) {
+    font-size: 5vw;
+  }
 }
 
 .project-links {
@@ -103,11 +113,14 @@
 
   font-weight: 400;
   line-height: 1.75em;
+  @media screen and (max-width: 400px) {
+    font-size: 1em;
+  }
 }
 
 .project-bubble-container {
-  margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   @media screen and (max-width: 600px) {
     align-items: center;
     justify-content: center;
@@ -115,6 +128,7 @@
 }
 
 .project-bubble {
+  margin-top: 10px;
   margin-right: 5px;
   padding: 5px 15px;
   border-radius: 20px;
@@ -137,6 +151,9 @@
 
 .image-container {
   flex: 2;
+  @media screen and (max-width: 600px) {
+    flex: 0;
+  }
   @media screen and (max-width: 1000px) {
     margin-top: 40px;
   }
@@ -144,7 +161,6 @@
 
 .image {
   box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.25);
-  max-height: 60vh;
 }
 
 .dropdown-container {
