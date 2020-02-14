@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
       subtitle={subtitle}
       subtitleEmphasis={subtitleEmphasis}
     />
-    <section className='section section--gradient'>
+    {/* <section className='section section--gradient'>
       <div className='container'>
         <div className='section'>
           <div className='columns'>
@@ -71,7 +71,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
   </div>
 );
 
@@ -79,13 +79,13 @@ IndexPageTemplate.propTypes = {
   pretitle: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleEmphasis: PropTypes.array,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  // heading: PropTypes.string,
+  // subheading: PropTypes.string,
+  // mainpitch: PropTypes.object,
+  // description: PropTypes.string,
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
 };
 
 const IndexPage = ({ data }) => {
@@ -97,11 +97,11 @@ const IndexPage = ({ data }) => {
         pretitle={frontmatter.pretitle}
         subtitle={frontmatter.subtitle}
         subtitleEmphasis={frontmatter.subtitleEmphasis}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -127,7 +127,13 @@ export const pageQuery = graphql`
           word
           destination
         }
-        heading
+      }
+    }
+  }
+`;
+
+/*
+heading
         subheading
         mainpitch {
           title
@@ -148,7 +154,4 @@ export const pageQuery = graphql`
           heading
           description
         }
-      }
-    }
-  }
-`;
+*/

@@ -35,10 +35,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.menu}>
-          <Link className={styles.link} to='/about'>
+          {/* <Link className={styles.link} to='/about'>
             About
           </Link>
-          <div className={styles.linkSpacer} />
+          <div className={styles.linkSpacer} /> */}
           <Link className={styles.link} to='/projects'>
             Projects
           </Link>
