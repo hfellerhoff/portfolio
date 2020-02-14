@@ -1,8 +1,9 @@
 ---
-templateKey: 'project'
-title: 'OpenIPA'
-type: 'IPA Transcription Tool'
-description: 'A free, fast IPA transcription tool that can transcribe foreign language text into the International Phonetic Alphabet in real-time.'
+templateKey: project
+title: OpenIPA
+type: IPA Transcription Tool
+description: >-
+  A free, fast IPA transcription tool that can transcribe foreign language text into the International Phonetic Alphabet in real-time.
 url: https://www.openipa.org
 github: https://github.com/hfellerhoff/openipa
 image: /img/openipa.jpg
