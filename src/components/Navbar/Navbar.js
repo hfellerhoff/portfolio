@@ -6,21 +6,6 @@ import styles from './Navbar.module.scss';
 const Navbar = () => {
   const [navbarRef, setNavbarRef] = useState(null);
 
-  const checkForScroll = () => {
-    // if (typeof window !== undefined) {
-    //   if (window.pageYOffset > 0) {
-    //     navbarRef.className = `${styles.container} ${styles.containerScrolled}`;
-    //   } else {
-    //     navbarRef.className = styles.container;
-    //   }
-    // }
-  };
-
-  // if (typeof window !== undefined) {
-  //   window.onscroll = checkForScroll;
-  // }
-  // useEffect(() => checkForScroll(), []);
-
   return (
     <nav
       className={styles.container}
