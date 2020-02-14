@@ -5,12 +5,22 @@ import classes from './ProjectDropdown.module.scss';
 
 const ProjectDropdown = ({ dropdown: { title, text } }) => {
   const [isDroppedDown, setIsDroppedDown] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   return (
     <div className={classes.container}>
       <div
         className={classes.dropdownContainer}
+        style={
+          isSelected
+            ? { border: '1px solid whitesmoke' }
+            : { border: '1px solid transparent' }
+        }
         onClick={() => setIsDroppedDown(!isDroppedDown)}
+        onTouchStart={() => setIsSelected(true)}
+        onMouseEnter={() => setIsSelected(true)}
+        onMouseLeave={() => setIsSelected(false)}
+        onTouchEnd={() => setIsSelected(false)}
       >
         <h2 className={classes.dropdownTitle}>{title}</h2>
         <img
