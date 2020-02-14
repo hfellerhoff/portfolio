@@ -2,7 +2,10 @@
 @import '../../styles/variables';
 
 .container {
-  @extend %side-padding, %vertical-padding, %transition-padding;
+  @media screen and (min-width: 800px) {
+    margin-top: -40px;
+  }
+  @extend %side-padding, %vertical-padding, %transition-all;
 }
 
 .page-title {
