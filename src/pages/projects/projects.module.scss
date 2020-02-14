@@ -1,0 +1,20 @@
+@import '../../styles/extendable';
+@import '../../styles/variables';
+
+.container {
+  @extend %side-padding, %vertical-padding, %transition-padding;
+}
+
+.page-title {
+  margin-left: -2.5px;
+
+  color: $primaryblue;
+  text-shadow: -2px 2px 0px $secondaryblue;
+
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  @media screen and (max-width: 400px) {
+    font-size: 15vw;
+  }
+}

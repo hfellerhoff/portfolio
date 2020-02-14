@@ -8,7 +8,7 @@ import Content, { HTMLContent } from '../components/Content';
 
 import externalLink from '../img/external-link.png';
 import code from '../img/code.png';
-import ProjectDropdown from '../components/ProjectDropdown';
+import ProjectDropdown from '../components/ProjectDropdown/ProjectDropdown';
 
 const ProjectTemplate = ({
   content,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
-import logo from '../img/logo.svg';
+import logo from '../../img/logo.svg';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {

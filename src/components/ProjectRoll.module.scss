@@ -1,0 +1,84 @@
+@import '../styles/variables';
+@import '../styles/extendable';
+
+.card-container {
+  margin-top: 20px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  color: #ddd;
+  background: $darkergray;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.1s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: -15px 15px 10px 0px rgba(0, 0, 0, 0.4);
+  transform: scale(1.0125);
+}
+
+.card-image-container {
+  border-radius: 15px;
+}
+
+.card-content-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content-text-container {
+}
+
+.card-title {
+  color: $primaryblue;
+  text-shadow: -1px 1px 0px $secondaryblue;
+
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  @media screen and (max-width: 400px) {
+    font-size: 15vw;
+  }
+}
+
+.card-type {
+  color: $primarygreen;
+
+  font-weight: 700;
+  font-size: 1.25em;
+  @media screen and (max-width: 400px) {
+    font-size: 5vw;
+  }
+}
+
+.card-description {
+  margin-top: 10px;
+  color: #bbb;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.card-bubble-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}

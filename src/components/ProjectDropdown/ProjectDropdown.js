@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import plus from '../img/icons/plus.png';
-import minus from '../img/icons/minus.png';
+import plus from '../../img/icons/plus.png';
+import minus from '../../img/icons/minus.png';
 import classes from './ProjectDropdown.module.scss';
 
 const ProjectDropdown = ({ dropdown: { title, text } }) => {

@@ -3,7 +3,7 @@ templateKey: project
 title: JoinMe
 type: Android App Prototype
 description: >-
-  JoinMe is an Android app designed to facilitate easy, informal meet ups among
+  An Android app designed to facilitate easy, informal meet ups among
   friends. It includes a friends system with database integration and a clear
   dashboard with the user’s friends’ current locations.
 github: 'https://github.com/hfellerhoff/JoinMe'

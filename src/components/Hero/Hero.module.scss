@@ -11,7 +11,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  @extend %side-padding, %transition-all;
+  @extend %side-padding, %transition-padding;
 }
 
 .hero-pretitle {

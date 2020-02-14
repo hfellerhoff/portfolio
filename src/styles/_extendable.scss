@@ -22,6 +22,28 @@ $transition-time: 0.2s;
   }
 }
 
+%vertical-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 1000px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 %top-padding {
   padding-top: 20px;
 
