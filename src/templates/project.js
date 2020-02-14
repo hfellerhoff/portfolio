@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import classes from './project.module.scss';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Content, { HTMLContent } from '../components/Content';
 
