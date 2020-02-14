@@ -3,7 +3,8 @@
 
 .hero {
   background: #2c2e35;
-  height: calc(100vh - #{$navbar-height});
+  margin-top: -$navbar-height;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
