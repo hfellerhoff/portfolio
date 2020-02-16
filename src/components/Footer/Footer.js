@@ -70,10 +70,18 @@ const Footer = () => {
             )}
           </div>
           <div className={classes.socialContainer}>
-            <a href='' target='_blank' rel='noreferrer noopener'>
+            <a
+              href='https://github.com/hfellerhoff'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
               <img src={github} className={classes.socialIcon} />
             </a>
-            <a href='' target='_blank' rel='noreferrer noopener'>
+            <a
+              href='https://www.linkedin.com/in/henry-fellerhoff-b43365174/'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
               <img src={linkedin} className={classes.socialIcon} />
             </a>
           </div>
