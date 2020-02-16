@@ -48,6 +48,11 @@
 .logo-image {
   height: 3em;
   width: 3em;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 
 .item,
