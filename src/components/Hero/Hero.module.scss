@@ -4,11 +4,15 @@
 .hero {
   background: #2c2e35;
   margin-top: -$navbar-height;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 400px) {
+    align-items: flex-start;
+    margin-top: 20px;
+  }
 }
 
 .container {
@@ -27,6 +31,7 @@
   flex: 4;
   margin-right: 40px;
   @media screen and (max-width: 1200px) {
+    flex: 0;
     margin-right: 0;
     width: 100%;
     max-width: 600px;
@@ -154,12 +159,13 @@
 }
 
 .navigation-container {
+  flex: 3;
   @media screen and (max-width: 1200px) {
+    flex: 0;
     margin-top: 40px;
     width: 100%;
     max-width: 600px;
   }
-  flex: 3;
   background: #292929;
   box-shadow: -15px 15px 5px 0px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
