@@ -9,16 +9,16 @@ subtitleEmphasis:
     destination: music
 codeLinks:
   - text: Check out my portfolio
+    shortText: Portfolio
     destination: projects
   - text: Learn more about me
+    shortText: About
     destination: projects
   - text: Get in contact
+    shortText: Contact
     destination: projects
 musicLinks:
-  - text: Take a listen to my music
-    destination: about
-  - text: Have a look at my arrangements
-    destination: about
-  - text: Get in contact
-    destination: projects
+  - text: Coming soon!
+    shortText: Coming soon!
+    destination: /
 ---

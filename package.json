@@ -45,6 +45,7 @@
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
+    "fix-develop": "yarn fix-sass && yarn develop",
     "develop-mobile": "npm run clean && gatsby develop -H $HOSTNAME -p 8000",
     "fix-sass": "yarn add --force node-sass",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

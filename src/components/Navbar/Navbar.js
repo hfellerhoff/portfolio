@@ -31,15 +31,6 @@ const Navbar = () => {
             <img src={logo} alt='HF' className={classes.logoImage} />
           </Link>
         </div>
-        {/* <div className={classes.linkContainer}>
-          <Link className={classes.link} to='/about'>
-            About
-          </Link>
-          <div className={classes.linkSpacer} />
-          <Link className={classes.link} to='/projects'>
-            Projects
-          </Link>
-        </div> */}
         <div className={classes.switchContainer}>
           <img className={classes.switchIcon} src={code} alt='Code' />
           <label className={classes.switch}>

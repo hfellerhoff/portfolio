@@ -3,9 +3,69 @@
 .container {
   padding: 20px 0;
   background: $darkergray;
+  height: 100vh;
   width: 100vw;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.logo {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo:hover {
+  box-shadow: -5px 5px 0px 0px $primaryblue;
+  transform: translate(2.5px, -2.5px);
+}
+
+.link-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  width: 80vw;
+  @media screen and (min-width: 1200px) {
+    padding: 20px 20px;
+  }
+}
+
+.link {
+  font-size: 1.4em;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 2px 10px;
+  color: #ccc;
+}
+
+.link-blue:hover {
+  color: #59c7d1;
+  text-shadow: -1px 1px 0px #3c8b8aaf;
+}
+
+.link-green:hover {
+  color: #65c19c;
+  text-shadow: -1px 1px 0px #328060b0;
+}
+
+.social-container {
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 5px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.social-icon:hover {
+  box-shadow: -0px 0px 5px 3px $primaryblue;
 }

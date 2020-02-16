@@ -2,9 +2,9 @@
 @import '../styles/extendable';
 
 .card-container {
-  margin-top: 20px;
+  margin-top: 30px;
   display: grid;
-  gap: 30px;
+  gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;

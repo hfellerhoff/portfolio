@@ -104,6 +104,8 @@
   font-size: 1.35em;
   font-weight: 500;
   text-decoration: none;
+
+  transition: 0.2s all ease-in-out;
 }
 
 .hero-emphasis-blue {
@@ -118,7 +120,7 @@
 
 .hero-emphasis:hover {
   cursor: pointer;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .hero-emphasis-green:hover {
@@ -225,7 +227,7 @@
 
 .link {
   font-size: 1.5em;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     font-size: 1.3em;
   }
   font-weight: 400;
@@ -234,7 +236,7 @@
   @media screen and (min-width: 1200px) {
     margin: 10px 0;
   }
-  color: #bbb;
+  color: #ddd;
 }
 
 .link:before {
