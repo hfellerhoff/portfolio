@@ -1,32 +1,59 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'gatsby';
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+  SiteFocus,
+  Actions,
+} from '../../context/GlobalContextProvider';
+
 import logo from '../../img/logo.svg';
-import styles from './Navbar.module.scss';
+import code from '../../img/icons/code.png';
+import music from '../../img/icons/music.png';
+import classes from './Navbar.module.scss';
 
 const Navbar = () => {
   const [navbarRef, setNavbarRef] = useState(null);
+  const dispatch = useContext(GlobalDispatchContext);
+  const state = useContext(GlobalStateContext);
+  console.log(state);
 
   return (
     <nav
-      className={styles.container}
+      className={classes.container}
       role='navigation'
       aria-label='main-navigation'
       ref={navbar => setNavbarRef(navbar)}
     >
-      <div className={styles.contentContainer}>
+      <div className={classes.contentContainer}>
         <div className='navbar-brand'>
-          <Link to='/' className={styles.logo} title='Logo'>
-            <img src={logo} alt='HF' className={styles.logoImage} />
+          <Link to='/' className={classes.logo} title='Logo'>
+            <img src={logo} alt='HF' className={classes.logoImage} />
           </Link>
         </div>
-        <div className={styles.menu}>
-          {/* <Link className={styles.link} to='/about'>
+        {/* <div className={classes.linkContainer}>
+          <Link className={classes.link} to='/about'>
             About
           </Link>
-          <div className={styles.linkSpacer} /> */}
-          <Link className={styles.link} to='/projects'>
+          <div className={classes.linkSpacer} />
+          <Link className={classes.link} to='/projects'>
             Projects
           </Link>
+        </div> */}
+        <div className={classes.switchContainer}>
+          <img className={classes.switchIcon} src={code} alt='Code' />
+          <label className={classes.switch}>
+            <input
+              className={classes.switchInput}
+              type='checkbox'
+              checked={state.siteFocus === SiteFocus.Music ? true : false}
+              onClick={() => {
+                dispatch({ type: Actions.ToggleSiteFocus });
+              }}
+            />
+            <span className={classes.switchSphere}></span>
+          </label>
+          <img className={classes.switchIcon} src={music} alt='Music' />
         </div>
       </div>
     </nav>

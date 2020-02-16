@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import classes from './project.module.scss';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Content, { HTMLContent } from '../components/Content';
 
@@ -31,6 +31,11 @@ const ProjectTemplate = ({
   return (
     <section className={classes.container}>
       {helmet || ''}
+      <div className={classes.backLinkContainer}>
+        <Link className={classes.backLink} to='/projects'>
+          {`Back to Projects`}
+        </Link>
+      </div>
       <div className={classes.initialContainer}>
         <div className={classes.projectDetailsContainer}>
           <div>

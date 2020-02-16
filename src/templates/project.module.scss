@@ -1,6 +1,31 @@
 @import '../styles/_extendable';
 @import '../styles/_variables';
 
+.back-link-container {
+  margin-top: 40px;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.back-link {
+  color: white;
+  background: #25272c;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9em;
+  box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease-in-out;
+}
+
+.back-link:hover {
+  box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  transform: scale(1.0125);
+}
+
 .container {
   background: $darkgray;
   min-height: 85vh;
@@ -8,9 +33,9 @@
 }
 
 .initial-container {
-  padding-top: 40px;
+  padding-top: 30px;
   @media screen and (min-width: 1000px) {
-    padding-top: 60px;
+    padding-top: 40px;
     display: flex;
     flex-direction: row;
   }

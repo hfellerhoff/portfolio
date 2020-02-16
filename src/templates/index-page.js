@@ -7,13 +7,21 @@ import Layout from '../components/Layout';
 import logo from '../img/logo-long.svg';
 import Hero from '../components/Hero/Hero';
 
-export const IndexPageTemplate = ({ pretitle, subtitle, subtitleEmphasis }) => (
+export const IndexPageTemplate = ({
+  pretitle,
+  subtitle,
+  subtitleEmphasis,
+  codeLinks,
+  musicLinks,
+}) => (
   <div>
     <Hero
       logo={logo}
       pretitle={pretitle}
       subtitle={subtitle}
       subtitleEmphasis={subtitleEmphasis}
+      codeLinks={codeLinks}
+      musicLinks={musicLinks}
     />
   </div>
 );
@@ -22,6 +30,8 @@ IndexPageTemplate.propTypes = {
   pretitle: PropTypes.string,
   subtitle: PropTypes.string,
   subtitleEmphasis: PropTypes.array,
+  codeLinks: PropTypes.array,
+  musicLinks: PropTypes.array,
 };
 
 const IndexPage = ({ data }) => {
@@ -33,6 +43,8 @@ const IndexPage = ({ data }) => {
         pretitle={frontmatter.pretitle}
         subtitle={frontmatter.subtitle}
         subtitleEmphasis={frontmatter.subtitleEmphasis}
+        codeLinks={frontmatter.codeLinks}
+        musicLinks={frontmatter.musicLinks}
       />
     </Layout>
   );
@@ -56,6 +68,14 @@ export const pageQuery = graphql`
         subtitle
         subtitleEmphasis {
           word
+          destination
+        }
+        codeLinks {
+          text
+          destination
+        }
+        musicLinks {
+          text
           destination
         }
       }
