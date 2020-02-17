@@ -32,8 +32,8 @@ const ProjectTemplate = ({
     <section className={classes.container}>
       {helmet || ''}
       <div className={classes.backLinkContainer}>
-        <Link className={classes.backLink} to='/projects'>
-          {`Back to Projects`}
+        <Link className={classes.backLink} to='/portfolio'>
+          {`Back to Portfolio`}
         </Link>
       </div>
       <div className={classes.initialContainer}>

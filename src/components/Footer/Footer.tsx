@@ -4,12 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby';
 // @ts-ignore
 import logo from '../../img/logo-long.svg';
 // @ts-ignore
-import github from '../../img/icons/github.png';
-// @ts-ignore
-import linkedin from '../../img/icons/linkedin.png';
-// @ts-ignore
 import classes from './Footer.module.scss';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
 import MarkdownLinkContainer from '../MarkdownLinkContainer';
 import SocialLinkContainer from '../SocialLinkContainer/SocialLinkContainer';

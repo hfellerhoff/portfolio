@@ -1,0 +1,85 @@
+@import '../styles/variables';
+.container {
+  margin-top: -$navbar-height / 2;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 3em;
+  @media screen and (max-width: 600px) {
+    font-size: 2.5em;
+  }
+}
+
+.heading-blue {
+  color: $primaryblue;
+  text-shadow: -2px 2px 0px $secondaryblue;
+}
+
+.heading-green {
+  color: $primarygreen;
+  text-shadow: -2px 2px 0px $secondarygreen;
+}
+
+.subheading {
+  font-size: 2em;
+  @media screen and (max-width: 600px) {
+    font-size: 1.5em;
+  }
+}
+
+.subheading-blue {
+  color: $primaryblue;
+  text-shadow: -1px 1px 0px $secondaryblue;
+}
+
+.subheading-green {
+  color: $primarygreen;
+  text-shadow: -1px 1px 0px $secondarygreen;
+}
+
+.button {
+  margin: 20px 0;
+  text-decoration: none;
+  height: 100px;
+  width: 16em;
+  @media screen and (max-width: 600px) {
+    width: 14em;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.button-blue {
+  color: $primaryblue;
+  border: 5px solid $primaryblue;
+  box-shadow: -5px 5px 0px 0px $secondaryblue;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-blue:hover {
+  background: $primaryblue;
+  color: whitesmoke;
+}
+
+.button-green {
+  color: $primarygreen;
+  border: 5px solid $primarygreen;
+  box-shadow: -5px 5px 0px 0px $secondarygreen;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-green:hover {
+  background: $primarygreen;
+  color: whitesmoke;
+}

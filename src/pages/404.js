@@ -1,13 +1,42 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React, { useContext } from 'react';
+import Layout from '../components/Layout';
+import classes from './404.module.scss';
+import { Link } from 'gatsby';
+import {
+  GlobalStateContext,
+  SiteFocus,
+} from '../context/GlobalContextProvider';
 
-const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const state = useContext(GlobalStateContext);
+  const headingColorClass =
+    state.siteFocus === SiteFocus.Code
+      ? classes.headingBlue
+      : classes.headingGreen;
+  const buttonColorClass =
+    state.siteFocus === SiteFocus.Code
+      ? classes.buttonBlue
+      : classes.buttonGreen;
+  const subheadingColorClass =
+    state.siteFocus === SiteFocus.Code
+      ? classes.subheadingBlue
+      : classes.subheadingGreen;
 
-export default NotFoundPage
+  return (
+    <Layout>
+      <div className={classes.container}>
+        <h1 className={`${classes.heading} ${headingColorClass}`}>
+          Page not found
+        </h1>
+        <Link className={`${classes.button} ${buttonColorClass}`} to='/'>
+          Click Here
+        </Link>
+        <h3 className={`${classes.subheading} ${subheadingColorClass}`}>
+          to return to home
+        </h3>
+      </div>
+    </Layout>
+  );
+};
+
+export default NotFoundPage;

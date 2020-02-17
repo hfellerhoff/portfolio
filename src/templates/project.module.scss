@@ -27,8 +27,10 @@
 }
 
 .container {
+  margin-top: -$navbar-height;
+  padding-top: $navbar-height;
   background: $darkgray;
-  min-height: 85vh;
+  min-height: 100vh;
   @extend %side-padding, %transition-all;
 }
 
@@ -196,7 +198,15 @@
 }
 
 .dropdown-container {
+  margin-top: 20px;
   padding-bottom: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+  column-gap: 20px;
 }
 
 .projectContent {
