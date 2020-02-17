@@ -11,11 +11,11 @@ codeLinks:
   - text: Check out my portfolio
     shortText: Portfolio
     isExternal: false
-    destination: projects
+    destination: portfolio
   - text: Learn more about me
     shortText: About
     isExternal: false
-    destination: projects
+    destination: /
   - text: Look through my resume
     shortText: Resume
     isExternal: true

@@ -9,10 +9,10 @@ const ProjectPage = () => {
   return (
     <Layout>
       <Helmet titleTemplate='%s | Henry Fellerhoff'>
-        <title>Projects</title>
+        <title>Portfolio</title>
       </Helmet>
       <div className={classes.container}>
-        <h1 className={classes.pageTitle}>Projects</h1>
+        <h1 className={classes.pageTitle}>Portfolio</h1>
         <ProjectRoll />
       </div>
     </Layout>
