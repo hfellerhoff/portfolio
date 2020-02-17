@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/extendable';
+@import '../styles/variables';
+@import '../styles/extendable';
 
 .contact {
   min-height: 100vh;
@@ -26,8 +26,7 @@
 .page-title {
   margin-left: -2.5px;
 
-  color: $primaryblue;
-  text-shadow: -2px 2px 0px $secondaryblue;
+  color: white;
 
   font-size: 4em;
   font-weight: 600;
@@ -35,4 +34,14 @@
   @media screen and (max-width: 400px) {
     font-size: 15vw;
   }
+}
+
+.blue-text {
+  color: $primaryblue;
+  text-shadow: -2px 2px 0px $secondaryblue;
+}
+
+.green-text {
+  color: $primarygreen;
+  text-shadow: -2px 2px 0px $secondarygreen;
 }

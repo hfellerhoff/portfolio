@@ -9,20 +9,16 @@ import github from '../../img/icons/github.png';
 import linkedin from '../../img/icons/linkedin.png';
 // @ts-ignore
 import classes from './Footer.module.scss';
-import {
-  GlobalStateContext,
-  SiteFocus,
-} from '../../context/GlobalContextProvider';
+import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
 import MarkdownLinkContainer from '../MarkdownLinkContainer';
+import SocialLinkContainer from '../SocialLinkContainer/SocialLinkContainer';
 
 const Footer = () => {
-  const state = useContext(GlobalStateContext);
-
   return (
     <StaticQuery
       query={graphql`
-        query Footer {
+        query {
           markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
             frontmatter {
               codeLinks {
@@ -57,22 +53,7 @@ const Footer = () => {
             codeClassName={`${classes.link} ${classes.linkBlue}`}
             musicClassName={`${classes.link} ${classes.linkGreen}`}
           />
-          <div className={classes.socialContainer}>
-            <a
-              href='https://github.com/hfellerhoff'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              <img src={github} className={classes.socialIcon} />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/henry-fellerhoff-b43365174/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
-              <img src={linkedin} className={classes.socialIcon} />
-            </a>
-          </div>
+          <SocialLinkContainer />
         </footer>
       )}
     />

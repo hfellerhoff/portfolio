@@ -1,0 +1,27 @@
+@import '../../styles/extendable';
+@import '../../styles/variables';
+
+.social-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 48px;
+  height: 58px;
+  margin: 0 5px;
+
+  padding-bottom: 5px;
+  border-bottom: 5px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+.blue-highlight:hover {
+  border-bottom: 5px solid $primaryblue;
+}
+
+.green-highlight:hover {
+  border-bottom: 5px solid $primarygreen;
+}

@@ -25,8 +25,8 @@ codeLinks:
     isExternal: false
     destination: contact
 musicLinks:
-  - text: Coming soon!
-    shortText: Coming soon!
+  - text: Get in contact
+    shortText: Contact
     isExternal: false
-    destination: /
+    destination: contact
 ---

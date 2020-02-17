@@ -14,12 +14,13 @@
 
 .logo {
   cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 5px;
   transition: all 0.2s ease-in-out;
 }
 
 .logo:hover {
-  box-shadow: -5px 5px 0px 0px $primaryblue;
-  transform: translate(2.5px, -2.5px);
+  box-shadow: 0px 5px 0px 0px $primarygreen, 0px -5px 0px 0px $primaryblue;
 }
 
 .link-container {
