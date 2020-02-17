@@ -23,7 +23,7 @@ codeLinks:
   - text: Get in contact
     shortText: Contact
     isExternal: false
-    destination: projects
+    destination: contact
 musicLinks:
   - text: Coming soon!
     shortText: Coming soon!
