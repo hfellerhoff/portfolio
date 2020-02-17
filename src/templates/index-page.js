@@ -72,10 +72,14 @@ export const pageQuery = graphql`
         }
         codeLinks {
           text
+          shortText
+          isExternal
           destination
         }
         musicLinks {
           text
+          shortText
+          isExternal
           destination
         }
       }

@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
-import { Link } from 'gatsby';
 import {
   GlobalDispatchContext,
-  GlobalStateContext,
-  SiteFocus,
-  State,
   Actions,
 } from '../../context/GlobalContextProvider';
+import MarkdownLinkContainer from '../MarkdownLinkContainer';
 
 // Can't be bothered to fix this right now, so:
 // @ts-ignore
@@ -20,7 +17,6 @@ const Hero = ({
   codeLinks,
   musicLinks,
 }) => {
-  const state: State = useContext(GlobalStateContext);
   const dispatch = useContext(GlobalDispatchContext);
 
   const addSubtitleEmphasis = text => {
@@ -95,35 +91,14 @@ const Hero = ({
               className={`${classes.navigationContainerTopCircle} ${classes.navigationContainerTopCircleThree}`}
             ></span>
           </div>
-          <div className={classes.linkContainer}>
-            {codeLinks && musicLinks ? (
-              state.siteFocus === SiteFocus.Code ? (
-                codeLinks.map(link => {
-                  return (
-                    <Link
-                      className={`${classes.link} ${classes.linkBlue}`}
-                      to={link.destination}
-                    >
-                      {link.text}
-                    </Link>
-                  );
-                })
-              ) : (
-                musicLinks.map(link => {
-                  return (
-                    <Link
-                      className={`${classes.link} ${classes.linkGreen}`}
-                      to={link.destination}
-                    >
-                      {link.text}
-                    </Link>
-                  );
-                })
-              )
-            ) : (
-              <></>
-            )}
-          </div>
+          <MarkdownLinkContainer
+            className={classes.linkContainer}
+            codeLinks={codeLinks}
+            musicLinks={musicLinks}
+            codeClassName={`${classes.link} ${classes.linkBlue}`}
+            musicClassName={`${classes.link} ${classes.linkGreen}`}
+            showLongText
+          />
         </div>
       </div>
     </div>

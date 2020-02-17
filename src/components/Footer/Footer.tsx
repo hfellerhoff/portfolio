@@ -1,14 +1,20 @@
 import React, { useContext } from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
 
+// @ts-ignore
 import logo from '../../img/logo-long.svg';
+// @ts-ignore
 import github from '../../img/icons/github.png';
+// @ts-ignore
 import linkedin from '../../img/icons/linkedin.png';
+// @ts-ignore
 import classes from './Footer.module.scss';
 import {
   GlobalStateContext,
   SiteFocus,
 } from '../../context/GlobalContextProvider';
+
+import MarkdownLinkContainer from '../MarkdownLinkContainer';
 
 const Footer = () => {
   const state = useContext(GlobalStateContext);
@@ -20,11 +26,15 @@ const Footer = () => {
           markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
             frontmatter {
               codeLinks {
+                text
                 shortText
+                isExternal
                 destination
               }
               musicLinks {
+                text
                 shortText
+                isExternal
                 destination
               }
             }
@@ -40,35 +50,13 @@ const Footer = () => {
           <Link to='/' className={classes.logo}>
             <img src={logo} alt='HF' style={{ width: '16em' }} />
           </Link>
-          <div className={classes.linkContainer}>
-            {codeLinks && musicLinks ? (
-              state.siteFocus === SiteFocus.Code ? (
-                codeLinks.map(link => {
-                  return (
-                    <Link
-                      className={`${classes.link} ${classes.linkBlue}`}
-                      to={link.destination}
-                    >
-                      {link.shortText}
-                    </Link>
-                  );
-                })
-              ) : (
-                musicLinks.map(link => {
-                  return (
-                    <Link
-                      className={`${classes.link} ${classes.linkGreen}`}
-                      to={link.destination}
-                    >
-                      {link.shortText}
-                    </Link>
-                  );
-                })
-              )
-            ) : (
-              <></>
-            )}
-          </div>
+          <MarkdownLinkContainer
+            className={classes.linkContainer}
+            codeLinks={codeLinks}
+            musicLinks={musicLinks}
+            codeClassName={`${classes.link} ${classes.linkBlue}`}
+            musicClassName={`${classes.link} ${classes.linkGreen}`}
+          />
           <div className={classes.socialContainer}>
             <a
               href='https://github.com/hfellerhoff'

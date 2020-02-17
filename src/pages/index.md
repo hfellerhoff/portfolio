@@ -10,15 +10,23 @@ subtitleEmphasis:
 codeLinks:
   - text: Check out my portfolio
     shortText: Portfolio
+    isExternal: false
     destination: projects
   - text: Learn more about me
     shortText: About
+    isExternal: false
     destination: projects
+  - text: Look through my resume
+    shortText: Resume
+    isExternal: true
+    destination: https://drive.google.com/file/d/1iUZ6TGW3A1Oevn0dW2vtmnrFpknKlDkV/view
   - text: Get in contact
     shortText: Contact
+    isExternal: false
     destination: projects
 musicLinks:
   - text: Coming soon!
     shortText: Coming soon!
+    isExternal: false
     destination: /
 ---
