@@ -24,15 +24,13 @@
 }
 
 .title {
-  margin-left: -2.5px;
-
   color: white;
 
   font-size: 4em;
   font-weight: 600;
   letter-spacing: 0.025em;
-  @media screen and (max-width: 400px) {
-    font-size: 15vw;
+  @media screen and (max-width: 600px) {
+    font-size: 3em;
   }
 }
 

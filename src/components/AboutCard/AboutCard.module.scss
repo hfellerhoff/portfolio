@@ -14,21 +14,28 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: white;
 }
 
 .card:hover {
-  cursor: pointer;
   box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.35);
   transform: scale(1.0125);
 }
 
-.card-text {
-  color: white;
+.pretext {
+  color: whitesmoke;
+  @media screen and (max-width: 600px) {
+    font-size: 1em;
+  }
 }
 
-.card-method {
+.card-title {
   font-size: 2em;
   color: white;
+  text-shadow: -2px 2px 0px #aaa;
+  @media screen and (max-width: 600px) {
+    font-size: 1.8em;
+  }
 }
 
 .icon {
@@ -36,6 +43,18 @@
   margin-right: 40px;
   height: 48px;
   width: 48px;
+}
+
+.subtitle-pretext {
+  margin-top: 5px;
+  color: #eee;
+}
+
+.subtitle {
+  margin-top: 2.5px;
+  font-size: 1.25em;
+  color: whitesmoke;
+  text-shadow: -1px 1px 0px #aaa;
 }
 
 .blue-text {
@@ -46,4 +65,14 @@
 .green-text {
   color: $primarygreen;
   text-shadow: -2px 2px 0px $secondarygreen;
+}
+
+.blue-subtitle-text {
+  color: $primaryblue;
+  text-shadow: -1px 1px 0px $secondaryblue;
+}
+
+.green-subtitle-text {
+  color: $primarygreen;
+  text-shadow: -1px 1px 0px $secondarygreen;
 }
