@@ -12,10 +12,6 @@ codeLinks:
     shortText: Portfolio
     isExternal: false
     destination: portfolio
-  - text: Learn more about me
-    shortText: About
-    isExternal: false
-    destination: /
   - text: Look through my resume
     shortText: Resume
     isExternal: true
@@ -30,3 +26,8 @@ musicLinks:
     isExternal: false
     destination: contact
 ---
+
+- text: Learn more about me
+  shortText: About
+  isExternal: false
+  destination: about

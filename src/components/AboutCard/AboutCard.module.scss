@@ -1,0 +1,49 @@
+@import '../../styles/extendable';
+@import '../../styles/variables';
+
+.card {
+  margin-top: 20px;
+  background: #292a2f;
+  width: 100%;
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  transform: scale(1.0125);
+}
+
+.card-text {
+  color: white;
+}
+
+.card-method {
+  font-size: 2em;
+  color: white;
+}
+
+.icon {
+  margin-top: 5px;
+  margin-right: 40px;
+  height: 48px;
+  width: 48px;
+}
+
+.blue-text {
+  color: $primaryblue;
+  text-shadow: -2px 2px 0px $secondaryblue;
+}
+
+.green-text {
+  color: $primarygreen;
+  text-shadow: -2px 2px 0px $secondarygreen;
+}
