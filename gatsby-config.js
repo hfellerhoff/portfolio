@@ -15,6 +15,7 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    `gatsby-plugin-transition-link`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
