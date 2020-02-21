@@ -8,6 +8,7 @@ import {
   GlobalStateContext,
   SiteFocus,
 } from '../context/GlobalContextProvider';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const ContactPageTemplate = ({
   title,
@@ -48,11 +49,13 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <ContactPageTemplate
-        title={frontmatter.title}
-        codeContactMethods={frontmatter.codeContactMethods}
-        musicContactMethods={frontmatter.musicContactMethods}
-      />
+      <PageTransition>
+        <ContactPageTemplate
+          title={frontmatter.title}
+          codeContactMethods={frontmatter.codeContactMethods}
+          musicContactMethods={frontmatter.musicContactMethods}
+        />
+      </PageTransition>
     </Layout>
   );
 };

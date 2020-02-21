@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
 import classes from './about-page.module.scss';
 import {
   GlobalStateContext,
   SiteFocus,
 } from '../context/GlobalContextProvider';
 import AboutCard from '../components/AboutCard/AboutCard';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const AboutPageTemplate = ({ title, elements }) => {
   const state = useContext(GlobalStateContext);
@@ -48,10 +48,12 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate
-        title={frontmatter.title}
-        elements={frontmatter.elements}
-      />
+      <PageTransition>
+        <AboutPageTemplate
+          title={frontmatter.title}
+          elements={frontmatter.elements}
+        />
+      </PageTransition>
     </Layout>
   );
 };

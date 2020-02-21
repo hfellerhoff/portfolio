@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 
 import logo from '../img/logo-long.svg';
 import Hero from '../components/Hero/Hero';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const IndexPageTemplate = ({
   pretitle,
@@ -39,13 +40,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        pretitle={frontmatter.pretitle}
-        subtitle={frontmatter.subtitle}
-        subtitleEmphasis={frontmatter.subtitleEmphasis}
-        codeLinks={frontmatter.codeLinks}
-        musicLinks={frontmatter.musicLinks}
-      />
+      <PageTransition>
+        <IndexPageTemplate
+          pretitle={frontmatter.pretitle}
+          subtitle={frontmatter.subtitle}
+          subtitleEmphasis={frontmatter.subtitleEmphasis}
+          codeLinks={frontmatter.codeLinks}
+          musicLinks={frontmatter.musicLinks}
+        />
+      </PageTransition>
     </Layout>
   );
 };
