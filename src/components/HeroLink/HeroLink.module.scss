@@ -1,0 +1,19 @@
+@import '../../styles/extendable';
+@import '../../styles/variables';
+
+.hero-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+
+  margin-bottom: 10px;
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+  }
+}

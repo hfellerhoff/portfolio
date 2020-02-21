@@ -5,6 +5,7 @@ import {
   SiteFocus,
   State,
 } from '../context/GlobalContextProvider';
+import HeroLink from './HeroLink/HeroLink';
 
 interface Props {
   className: string;
@@ -30,23 +31,31 @@ const MarkdownLinkContainer: React.FC<Props> = ({
       {codeLinks && musicLinks ? (
         state.siteFocus === SiteFocus.Code ? (
           codeLinks.map(link => {
-            return (
-              <TextLink
-                className={codeClassName}
-                link={link}
-                showLongText={showLongText}
-              />
-            );
+            if (showLongText) {
+              return <HeroLink className={codeClassName} link={link} />;
+            } else {
+              return (
+                <TextLink
+                  className={codeClassName}
+                  link={link}
+                  showLongText={showLongText}
+                />
+              );
+            }
           })
         ) : (
           musicLinks.map(link => {
-            return (
-              <TextLink
-                className={musicClassName}
-                link={link}
-                showLongText={showLongText}
-              />
-            );
+            if (showLongText) {
+              return <HeroLink className={codeClassName} link={link} />;
+            } else {
+              return (
+                <TextLink
+                  className={musicClassName}
+                  link={link}
+                  showLongText={showLongText}
+                />
+              );
+            }
           })
         )
       ) : (

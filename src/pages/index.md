@@ -12,25 +12,31 @@ codeLinks:
     shortText: Portfolio
     isExternal: false
     destination: portfolio
+    icon: portfolio.png
   - text: Learn more about me
     shortText: About
     isExternal: false
     destination: about
+    icon: about.png
   - text: Look through my resume
     shortText: Resume
     isExternal: true
     destination: https://drive.google.com/file/d/1iUZ6TGW3A1Oevn0dW2vtmnrFpknKlDkV/view
+    icon: resume.png
   - text: Get in contact
     shortText: Contact
     isExternal: false
     destination: contact
+    icon: contact.png
 musicLinks:
   - text: Learn more about me
     shortText: About
     isExternal: false
     destination: about
+    icon: about.png
   - text: Get in contact
     shortText: Contact
     isExternal: false
     destination: contact
+    icon: contact.png
 ---

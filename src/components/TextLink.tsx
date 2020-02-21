@@ -6,6 +6,7 @@ export interface TextLinkProps {
   shortText: string;
   isExternal: boolean;
   destination: string;
+  icon: string;
 }
 
 interface Props {

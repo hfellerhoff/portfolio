@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 
@@ -75,12 +75,14 @@ export const pageQuery = graphql`
           shortText
           isExternal
           destination
+          icon
         }
         musicLinks {
           text
           shortText
           isExternal
           destination
+          icon
         }
       }
     }
