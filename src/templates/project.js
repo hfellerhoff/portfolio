@@ -10,6 +10,7 @@ import Content, { HTMLContent } from '../components/Content';
 import externalLink from '../img/external-link.png';
 import code from '../img/code.png';
 import ProjectDropdown from '../components/ProjectDropdown/ProjectDropdown';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const ProjectTemplate = ({
   content,
@@ -158,26 +159,28 @@ const Project = ({ data }) => {
 
   return (
     <Layout>
-      <ProjectTemplate
-        content={html}
-        contentComponent={HTMLContent}
-        title={title}
-        type={type}
-        description={description}
-        url={url}
-        github={github}
-        image={image}
-        boxShadow={boxShadow}
-        technologies={technologies}
-        tools={tools}
-        dropdowns={dropdowns}
-        helmet={
-          <Helmet titleTemplate='%s | Projects'>
-            <title>{`${title}`}</title>
-            <meta name='description' content={`${description}`} />
-          </Helmet>
-        }
-      />
+      <PageTransition>
+        <ProjectTemplate
+          content={html}
+          contentComponent={HTMLContent}
+          title={title}
+          type={type}
+          description={description}
+          url={url}
+          github={github}
+          image={image}
+          boxShadow={boxShadow}
+          technologies={technologies}
+          tools={tools}
+          dropdowns={dropdowns}
+          helmet={
+            <Helmet titleTemplate='%s | Projects'>
+              <title>{`${title}`}</title>
+              <meta name='description' content={`${description}`} />
+            </Helmet>
+          }
+        />
+      </PageTransition>
     </Layout>
   );
 };
