@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextLinkProps } from '../TextLink';
 import { Link } from 'gatsby';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import classes from './HeroLink.module.scss';
 
 interface Props {
@@ -12,11 +13,30 @@ const HeroLink: React.FC<Props> = ({ link, className }) => {
   // If the link is external
   if (link.isExternal) {
     return (
-      <a
+      <PageTransition>
+        <a
+          className={`${className} ${classes.heroLink}`}
+          href={link.destination}
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          <img
+            src={require(`../../img/icons/${link.icon}`)}
+            alt={link.shortText}
+            className={classes.icon}
+          />
+          <span>{link.shortText}</span>
+        </a>
+      </PageTransition>
+    );
+  }
+
+  // If the link is internal (within the site)
+  return (
+    <PageTransition>
+      <Link
         className={`${className} ${classes.heroLink}`}
-        href={link.destination}
-        target='_blank'
-        rel='noreferrer noopener'
+        to={link.destination}
       >
         <img
           src={require(`../../img/icons/${link.icon}`)}
@@ -24,20 +44,8 @@ const HeroLink: React.FC<Props> = ({ link, className }) => {
           className={classes.icon}
         />
         <span>{link.shortText}</span>
-      </a>
-    );
-  }
-
-  // If the link is internal (within the site)
-  return (
-    <Link className={`${className} ${classes.heroLink}`} to={link.destination}>
-      <img
-        src={require(`../../img/icons/${link.icon}`)}
-        alt={link.shortText}
-        className={classes.icon}
-      />
-      <span>{link.shortText}</span>
-    </Link>
+      </Link>
+    </PageTransition>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export interface TextLinkProps {
   text: string;
@@ -21,22 +22,26 @@ const Link: React.FC<Props> = ({ link, className, showLongText }) => {
   // If the link is external
   if (link.isExternal) {
     return (
-      <a
-        className={className}
-        href={link.destination}
-        target='_blank'
-        rel='noreferrer noopener'
-      >
-        {text}
-      </a>
+      <PageTransition>
+        <a
+          className={className}
+          href={link.destination}
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          {text}
+        </a>
+      </PageTransition>
     );
   }
 
   // If the link is internal (within the site)
   return (
-    <GatsbyLink className={className} to={link.destination}>
-      {text}
-    </GatsbyLink>
+    <PageTransition>
+      <GatsbyLink className={className} to={link.destination}>
+        {text}
+      </GatsbyLink>
+    </PageTransition>
   );
 };
 
