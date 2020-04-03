@@ -2,5 +2,6 @@
 <p align='center'>
   <img src='src/img/logo-long.svg' width='400' height='200' />
 </p>
+  </a>
 
 This is my personal portfolio, built with Gatsby.js. Feel free to take a look around!
