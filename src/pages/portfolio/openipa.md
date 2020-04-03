@@ -15,8 +15,7 @@ technologies:
   - SASS
 tools:
   - VS Code
-  - Git
-  - Github
+  - Git + Github
 dropdowns:
   - title: What is IPA transcription and when is it needed?
     text: IPA transcription is the process of taking text from a given language and writing it in IPA, the International Phonetic Alphabet. OpenIPA is designed for use in transcription for Lyric Diction, where IPA is used to help a singer learn how to pronounce pieces in languages that may be foreign or unfamiliar to them.
