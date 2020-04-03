@@ -4,4 +4,6 @@
   </p>
 </a>
 
-This is my personal portfolio, built with Gatsby.js. Feel free to take a look around!
+<p align='center'>
+  This is my personal portfolio, built with Gatsby.js. Feel free to take a look around!
+</p>
